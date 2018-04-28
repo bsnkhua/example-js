@@ -14,6 +14,8 @@ function negativeFilter(input) {
                 newArray.push(input[i]);
             }
         }
+
+        
         console.log(newArray);
         return newArray;
     }
