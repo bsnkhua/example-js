@@ -7,14 +7,22 @@ function isPolindrome(input) {
     var inputString;
     var inputStringReverse;
 
-    inputString = input.split('');
-    inputString = inputString.join('');
-    inputString = inputString.toLowerCase();
+    inputString = input.toLowerCase();
+    // inputString = inputString.split('');
 
-    inputStringReverse = input.split('');
+    // for (i = 0; i <inputString.length; i++) {
+    //     if (inputString[i] === ',' || inputString[i] === ' ' || inputString[i] === '!' || inputString[i] === '.') {
+    //         delete inputString[i];
+    //         // console.log(inputString);
+    //     }
+    // }
+    // inputString = inputString.join('');
+    
+    inputString = inputString.replace(/\,| |\!|\./g, "");
+
+    inputStringReverse = inputString.split('');
     inputStringReverse = inputStringReverse.reverse();
     inputStringReverse = inputStringReverse.join('');
-    inputStringReverse = inputStringReverse.toLowerCase();
 
     var result = inputString != inputStringReverse ? false : true;
 
@@ -24,6 +32,7 @@ function isPolindrome(input) {
     return result;
 }
 
-isPolindrome('А роза упала на лапу Азора');
+isPolindrome('д.од,дод!');
+// isPolindrome('А роза упала на лапу Азора');
 
 module.exports = isPolindrome;
