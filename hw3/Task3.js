@@ -8,15 +8,6 @@ function isPolindrome(input) {
     var inputStringReverse;
 
     inputString = input.toLowerCase();
-    // inputString = inputString.split('');
-
-    // for (i = 0; i <inputString.length; i++) {
-    //     if (inputString[i] === ',' || inputString[i] === ' ' || inputString[i] === '!' || inputString[i] === '.') {
-    //         delete inputString[i];
-    //         // console.log(inputString);
-    //     }
-    // }
-    // inputString = inputString.join('');
     
     inputString = inputString.replace(/\,| |\!|\./g, "");
 
@@ -26,13 +17,7 @@ function isPolindrome(input) {
 
     var result = inputString != inputStringReverse ? false : true;
 
-    console.log(inputString);
-    console.log(inputStringReverse);
-    console.log(result);
     return result;
 }
-
-isPolindrome('д.од,дод!');
-// isPolindrome('А роза упала на лапу Азора');
 
 module.exports = isPolindrome;

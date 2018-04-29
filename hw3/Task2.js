@@ -4,7 +4,21 @@
  * @returns {Array<number>} Returns filtered array.
  */
 function advancedFilter(input) {
-    return;
+    var newarray = [];
+
+    for (i=0; i < input.length; i ++) {
+        if (typeof input[i] != 'number') {
+            return;
+        } else if (isNumberInRange(input[i])) {
+            newarray.push(input[i]);
+        }
+    }
+
+    return newarray;
+}
+
+function isNumberInRange(number) {
+    return number > 0 && number < 10;
 }
 
 module.exports = advancedFilter;
